@@ -1,0 +1,2 @@
+# esThesaurus
+Tesauro de castellano
