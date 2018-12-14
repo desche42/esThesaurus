@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 let thesaurus = { dict: {}};
 
 function _checkWord (word) {
