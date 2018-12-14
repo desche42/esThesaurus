@@ -1,0 +1,1 @@
+module.exports = ["mnemónica","mnemónico","mnemotecnia","mnemotécnica","mnemotécnico"]

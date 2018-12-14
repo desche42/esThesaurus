@@ -1,0 +1,1 @@
+module.exports = ["koala","kodzito","kohl","koiné","kopek"]

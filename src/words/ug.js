@@ -1,0 +1,1 @@
+module.exports = ["ugandés","ugetista","ugre","ugrofinés"]

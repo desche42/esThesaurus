@@ -1,0 +1,1 @@
+module.exports = ["xóchil","xocoatole","xocoyote","xola","xolo"]

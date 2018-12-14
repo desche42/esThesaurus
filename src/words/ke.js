@@ -1,0 +1,1 @@
+module.exports = ["kebab","kéfir","kelvin","kendo","keniano","keniata","kerigma","kermes","kermés","keroseno","kétchup"]

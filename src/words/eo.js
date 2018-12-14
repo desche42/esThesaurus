@@ -1,0 +1,1 @@
+module.exports = ["eocénico","eoceno","eólico","eolio","eolito","eón","eosina"]

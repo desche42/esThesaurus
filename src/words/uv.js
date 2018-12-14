@@ -1,0 +1,1 @@
+module.exports = ["uva","uvada","uvaduz","uvaguemaestre","uval","uvate","uvayema","uve","úvea","uveítis","uveral","uvero","uvi","uviar","uvilla","uvillo","úvula","uvular"]

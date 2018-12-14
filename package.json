@@ -1,0 +1,24 @@
+{
+  "name": "esthesaurus",
+  "version": "1.0.0",
+  "description": "Tesauro de castellano",
+  "main": "index.js",
+  "scripts": {
+    "test": "t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desche42/esThesaurus.git"
+  },
+  "keywords": [
+    "tesauro",
+    "castellano",
+    "diccionario"
+  ],
+  "author": "Alejandro Sánchez Pineda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desche42/esThesaurus/issues"
+  },
+  "homepage": "https://github.com/desche42/esThesaurus#readme"
+}

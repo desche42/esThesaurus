@@ -1,0 +1,1 @@
+module.exports = ["web","weber","weimarés","wellingtonia","wélter","wéstern","westfaliano"]

@@ -1,0 +1,1 @@
+module.exports = ["zebra","zeda","zedilla","zegrí","zeína","zéjel","zelandés","zelota","zelote","zempasúchil","zen","zendal","Zendavesta","zendo","zenit","zenzontle","zepelín","zeta","zeugma"]

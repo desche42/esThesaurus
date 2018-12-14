@@ -1,0 +1,1 @@
+module.exports = ["oogénesis","oolítico","oolito","oosfera","oósfera"]

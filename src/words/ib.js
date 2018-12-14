@@ -1,0 +1,1 @@
+module.exports = ["ibaguereño","ibarreño","ibérico","iberio","iberismo","ibero","ibero-","iberoamericano","iberorromance","iberorrománico","íbice","ibicenco","ibídem","ibis","ibón","iba","ibais","íbamos","iban","ibas"]

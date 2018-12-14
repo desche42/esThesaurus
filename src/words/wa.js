@@ -1,0 +1,1 @@
+module.exports = ["wagneriano","washingtoniano","waterpolista","waterpolo","watt","wau"]

@@ -1,0 +1,1 @@
+module.exports = ["gneis","gnéisico","gnetáceo","gnómico","gnomo","gnomon","gnomónica","gnomónico","gnoseología","gnoseológico","gnosis","gnosticismo","gnóstico"]

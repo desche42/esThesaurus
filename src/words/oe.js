@@ -1,0 +1,1 @@
+module.exports = ["oenegé","oenoteráceo","oersted","oesnoroeste","oesnorueste","oeste","oesudoeste","oesudueste"]

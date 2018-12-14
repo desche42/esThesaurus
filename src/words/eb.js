@@ -1,0 +1,1 @@
+module.exports = ["ebanista","ebanistería","ébano","ebenáceo","ebionita","ebonita","eboraria","eborario","ebrancado","ebriedad","ebrio","ebrioso","ebulición","ebullición","ebullómetro","ebulloscopia","eburnación","ebúrneo","eburno"]

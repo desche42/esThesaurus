@@ -1,0 +1,1 @@
+module.exports = ["eibarrés","eidético","eidetismo","einstenio","eirá"]

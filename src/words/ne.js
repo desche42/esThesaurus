@@ -1,0 +1,1 @@
+module.exports = ["ñecla","ñeco","ñecudo","ñeembukeño","ñengo","ñengue","ñeque"]

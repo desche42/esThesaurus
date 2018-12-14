@@ -1,0 +1,1 @@
+module.exports = ["oíble","oída","oídio","oído","oidor","oidoría","oíl","oimiento","oír","oíslo","oí","oía","oíais","oíamos","oían","oías","oído","oiga","oigáis","oigamos","oigan","oigas","oigo","oímos","oír","oirá","oirán","oirás","oiré","oiréis","oiremos","oiría","oiríais","oiríamos","oirían","oirías","oís","oíste","oísteis"]

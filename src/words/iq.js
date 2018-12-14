@@ -1,0 +1,1 @@
+module.exports = ["iqueño","iquiqueño","iquiteño"]

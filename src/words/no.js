@@ -1,0 +1,1 @@
+module.exports = ["ño","ñocha","ñoclo","ñoco","ñola","ñomblo","ñomblón","ñoñería","ñoñez","ñongo","ñoño","ñoqui","ñor","ñora","ñorbo"]

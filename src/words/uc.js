@@ -1,0 +1,1 @@
+module.exports = ["ucase","ucayalino","ucé","uced","ucencia","uchu","uci","ucraniano","ucranio","ucronía","ucrónico","ucubitano"]

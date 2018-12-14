@@ -1,0 +1,1 @@
+module.exports = ["sparring","sport","spray","sprint"]

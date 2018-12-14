@@ -1,0 +1,1 @@
+module.exports = ["IPC","ipecacuana","ipegüe","iperita","ipil","ipseidad","ipsi","ípsilon","ipso facto","ipso iure"]

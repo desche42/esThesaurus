@@ -1,0 +1,1 @@
+module.exports = ["tlachique","tlaco","tlacoache","tlaconete","tlacote","tlacoyo","tlacuache","tlameme","tlapalería","tlapalero","tlaxcalteca","tlazol"]

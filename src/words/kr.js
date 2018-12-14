@@ -1,0 +1,1 @@
+module.exports = ["krausismo","krausista","kremlin","kremlinología","kremlinólogo","kril","kriptón","kris"]

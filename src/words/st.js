@@ -1,0 +1,1 @@
+module.exports = ["stábat máter","statu quo","stop","stricto sensu","striptease"]

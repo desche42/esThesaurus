@@ -1,0 +1,1 @@
+module.exports = ["ka","kaaguaseño","kaakupeño","kaasapeño","kabuki","kafkiano","káiser","kaki","kamikaze","kan","kanindeyuense","kanjobal","kantiano","kantismo","kappa","karaoke","kárate","karateca","karma","karst","kárstico","kastila","katipunan","katiuska","kavakava","kayak","kazako"]

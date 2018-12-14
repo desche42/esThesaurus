@@ -1,0 +1,1 @@
+module.exports = ["oyente","oye","oyen","oyendo","oyera","oyerais","oyéramos","oyeran","oyeras","oyere","oyereis","oyéremos","oyeren","oyeres","oyeron","oyes","oyese","oyeseis","oyésemos","oyesen","oyeses","oyó"]
