@@ -1,24 +1,49 @@
-let thesaurus = { dict: {}};
+const fs = require('fs');
 
+/**
+ * @module Thesaurus loads partialThesaurus based on the given word.
+ * Exposes some methods.
+ */
+
+/** @todo Class */
+let thesaurus = { words: {} };
+
+/**
+ * Normalizes the word and gets the beggining. If the partial dict hasn't been
+ * loaded, loads it into thesaurus.
+ * @param {String} word 
+ * @returns Normalized word and beggining.
+ */
 function _checkWord (word) {
-  word = word.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  word = word.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 
-  let begginig = word.length > 1
+  let beggining = word.length > 1
     ? word.slice(0,2)
     : word.slice(0,1);
 
-  if (!thesaurus.dict[begginig]) {
-    thesaurus.dict[begginig] = require(`./words/${begginig}.js`);
-  }
-  return [word, begginig];
+  _loadPartialDict(beggining);
+
+  return [word, beggining];
 }
 
+function _loadPartialDict (beggining) {
+  if (!thesaurus.words[beggining]) {
+    thesaurus.words[beggining] = require(`./words/${beggining}.js`);
+  }
+}
 
+/**
+ * Checks if a word is included in the thesaurus.
+ */
 thesaurus.includes = (w) => {
-  let [word, begginig] = _checkWord(w);
-  const partialDict = thesaurus.dict[begginig];
+  let [word, beggining] = _checkWord(w);
+  const partialDict = thesaurus.words[beggining];
 
-  return partialDict && checkPlurals(word, partialDict) ;
+  if (!partialDict) {
+    throw "Unexpected error. Partial dictionary hasn't been found.";
+  } 
+
+  return _checkPlurals(word, partialDict) ;
 }
 
 thesaurus.prefixes = () => {
@@ -30,11 +55,25 @@ thesaurus.prefixes = () => {
   return prefixes;
 }
 
-function checkPlurals (word, partialDict){
+/** Loads all the data in the Thesaurus */
+thesaurus.loadAll = () => {
+  fs.readdirSync('src/words').forEach(f => _loadPartialDict(f.replace('.js', '')));
+}
+
+
+/**
+ * If the word it's a plural, checks its singular form.
+ * @param {string} word 
+ * @param {object} partialDict 
+ * @example 'bueyes' -> first checks buey; 
+ * if not included checks bueye
+ * and if not included then bueyes
+ */
+function _checkPlurals (word, partialDict){
   let sing = [word];
   let letters = word.split('');
-  letters.pop() === 's' && sing.push(letters.join('')); 
-  letters.pop() === 'e' && sing.push(letters.join(''));
+  letters.pop() === 's' && sing.unshift(letters.join('')); 
+  letters.pop() === 'e' && sing.unshift(letters.join(''));
 
   let isincluded = sing.some(w => {
     return partialDict.includes(w)

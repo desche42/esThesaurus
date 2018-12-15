@@ -1,1 +1,0 @@
-module.exports = ["a capela","a contráriis","a contrario sensu","a divinis","a fortiori","a látere","a nativitate","a pari","a posteriori","a priori","a quo","a rádice","a sensu contrario","a símili"]
