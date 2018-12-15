@@ -7,6 +7,10 @@ let Thesaurus = require('./thesaurus');
 Thesaurus.loadAll();
 let words = Thesaurus.words;
 
+
+/**
+ * Writes the current words/; saved in case changes
+ */
 Object.keys(words).forEach(letter => {
   let current = words[letter];
   let obj = {};

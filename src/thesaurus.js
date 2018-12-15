@@ -26,9 +26,11 @@ function _checkWord (word) {
   return [word, beggining];
 }
 
+/** Loads the file with the given word beggining */
 function _loadPartialDict (beggining) {
-  if (!thesaurus.words[beggining]) {
-    thesaurus.words[beggining] = require(`./words/${beggining}.js`);
+  const path = `./words/${beggining}.js`;
+  if (!thesaurus.words[beggining] && fs.existsSync(path)) {
+    thesaurus.words[beggining] = require(path);
   }
 }
 
