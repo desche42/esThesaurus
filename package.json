@@ -2,7 +2,7 @@
   "name": "esthesaurus",
   "version": "1.0.0",
   "description": "Tesauro de castellano",
-  "main": "index.js",
+  "main": "src/thesaurus.js",
   "scripts": {
     "test": "t"
   },
