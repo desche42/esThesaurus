@@ -3,9 +3,8 @@ const fs = require('fs');
 /**
  * Contains all words of the thesaurus.
  */
-let Thesaurus = require('src/thesaurus');
+let Thesaurus = require('./thesaurus');
 Thesaurus.loadAll();
-
 let words = Thesaurus.words;
 
 Object.keys(words).forEach(letter => {
@@ -14,22 +13,22 @@ Object.keys(words).forEach(letter => {
   current.forEach(function (w) {
     if (w === ''){return;}
 
-    let begginig = w.length > 1
+    let beggining = w.length > 1
       ? w.slice(0,2)
       : w.slice(0,1);
 
-    begginig = begginig.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    beggining = beggining.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     
-    if (obj[begginig]) {
-      obj[begginig].push(w);
+    if (obj[beggining]) {
+      obj[beggining].push(w);
     } else {
-      obj[begginig] = [w];
+      obj[beggining] = [w];
     }
   });
 
-  Object.keys(obj).forEach(begginig => {
-    let data = 'module.exports = ' + JSON.stringify(obj[begginig]);
-    let path = `./src/words/${begginig}.js`;
+  Object.keys(obj).forEach(beggining => {
+    let data = 'module.exports = ' + JSON.stringify(obj[beggining]);
+    let path = `./src/words/${beggining}.js`;
     fs.writeFileSync(path, data);
   })
 })
