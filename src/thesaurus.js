@@ -2,15 +2,15 @@ const fs = require('fs');
 
 /**
  * @module Thesaurus loads partialThesaurus based on the given word.
- * Exposes some methods.
+ * Exposes some methods, basically includes.
  */
 
 /** @todo Class */
-let thesaurus = { words: {} };
+let Thesaurus = { words: {} };
 
 /**
  * Normalizes the word and gets the beggining. If the partial dict hasn't been
- * loaded, loads it into thesaurus.
+ * loaded, loads it into Thesaurus.
  * @param {String} word 
  * @returns Normalized word and beggining.
  */
@@ -29,17 +29,17 @@ function _checkWord (word) {
 /** Loads the file with the given word beggining */
 function _loadPartialDict (beggining) {
   const path = `./words/${beggining}.js`;
-  if (!thesaurus.words[beggining] && fs.existsSync(path)) {
-    thesaurus.words[beggining] = require(path);
+  if (!Thesaurus.words[beggining] && fs.existsSync(path)) {
+    Thesaurus.words[beggining] = require(path);
   }
 }
 
 /**
- * Checks if a word is included in the thesaurus.
+ * Checks if a word is included in the Thesaurus.
  */
-thesaurus.includes = (w) => {
+Thesaurus.includes = (w) => {
   let [word, beggining] = _checkWord(w);
-  const partialDict = thesaurus.words[beggining];
+  const partialDict = Thesaurus.words[beggining];
 
   if (!partialDict) {
     throw "Unexpected error. Partial dictionary hasn't been found.";
@@ -48,7 +48,7 @@ thesaurus.includes = (w) => {
   return _checkPlurals(word, partialDict) ;
 }
 
-thesaurus.prefixes = () => {
+Thesaurus.prefixes = () => {
   count = 0;
   let prefixes = [];
   Object.values(words).forEach(el => el
@@ -58,7 +58,7 @@ thesaurus.prefixes = () => {
 }
 
 /** Loads all the data in the Thesaurus */
-thesaurus.loadAll = () => {
+Thesaurus.loadAll = () => {
   fs.readdirSync('src/words').forEach(f => _loadPartialDict(f.replace('.js', '')));
 }
 
@@ -83,4 +83,4 @@ function _checkPlurals (word, partialDict){
   return Boolean(isincluded);
 }
 
-module.exports = thesaurus;
+module.exports = Thesaurus;
